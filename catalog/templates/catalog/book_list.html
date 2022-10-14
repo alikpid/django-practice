@@ -13,6 +13,11 @@
       {% endfor %}
 
     </ul>
+            {% if user.is_staff %}
+        <a
+            href="{% url 'book-create' %}" class="btn btn-primary">Add book
+        </a>
+        {% endif %}
     {% else %}
       <p>There are no books in the library.</p>
     {% endif %}
