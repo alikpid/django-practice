@@ -4,8 +4,15 @@
 
 <h1>Author List</h1>
 
+{% if user.is_staff %}
+<a
+        href="{% url 'author-create' %}" class="btn btn-primary">Add author
+</a>
+{% endif %}
+
 {% if author_list %}
   <ul>
+    <br>
 
   {% for author in author_list %}
     <li>
