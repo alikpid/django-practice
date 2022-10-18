@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-^6j9boaa@-882liy2_1glzb0vwbkisi+1d0i2=kg7kcyu&dsez
 DEBUG = True
 
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['alikpid.pythonanywhere.com']
 
 # Application definition
 
@@ -73,10 +73,14 @@ WSGI_APPLICATION = 'locallibrary.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
+'default': {
+    'ENGINE': 'django.db.backends.mysql',
+    'NAME': 'alikpid$locallibrary',
+    'USER': 'alikpid',
+    'PASSWORD': 'qwaszxAS12',
+    'HOST': 'alikpid.mysql.pythonanywhere-services.com',
+    'PORT': '3306',
+}
 }
 
 # Password validation
@@ -114,6 +118,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT= '/home/alikpid/locallibraryproj/catalog/static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
